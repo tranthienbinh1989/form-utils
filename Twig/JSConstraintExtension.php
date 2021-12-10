@@ -6,8 +6,10 @@ use JJB\FormUtilsBundle\Service\JSConstraintService;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class JSConstraintExtension extends \Twig_Extension
+class JSConstraintExtension extends AbstractExtension
 {
     /**
      * @var JSConstraintService
@@ -23,7 +25,7 @@ class JSConstraintExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('add_js_constraints', [$this, 'addJsConstraints'])
+            new TwigFunction('add_js_constraints', [$this, 'addJsConstraints'])
         ];
     }
 

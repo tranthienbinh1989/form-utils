@@ -7,11 +7,11 @@
 {% endblock form_row %}
 
 {% block form_errors %}
-    {% spaceless %}
+    {% apply spaceless %}
         <small data-validation-for="{{ id }}" class="error{% if errors|length <= 0 %} hide{% endif %}">
             {% for error in errors %}
                 {{ error.message|trans({}, translation_domain)|trim }} {% if not loop.last %}<br/>{% endif %}
             {% endfor %}
         </small>
-    {% endspaceless %}
+    {% endapply %}
 {% endblock form_errors %}

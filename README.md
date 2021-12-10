@@ -1,5 +1,9 @@
 # JJB/FormUtilsBundle #
 
+This is a clone from https://github.com/josephjbrewer/form-utils
+
+I have made some changes to make it works with Symfony 5 and latest Twig component.
+
 This bundle is designed to validate Symfony forms on the front-end without duplicating code or validation efforts. This plugin also fully supports translations for error messages and suggestion text.
 
 Installation

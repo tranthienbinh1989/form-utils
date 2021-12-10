@@ -17,8 +17,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode    = $treeBuilder->root('jjb_form_utils');
+        $treeBuilder = new TreeBuilder('jjb_form_utils');
+        $rootNode = method_exists(TreeBuilder::class, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('jjb_form_utils');
 
         return $treeBuilder;
     }
