@@ -1,5 +1,5 @@
 {
-    "name": "josephjbrewer/form-utils",
+    "name": "ttb/form-utils",
     "description": "Front-end form validation utilities for Symfony2 integration.",
     "license": "MIT",
     "type": "library",

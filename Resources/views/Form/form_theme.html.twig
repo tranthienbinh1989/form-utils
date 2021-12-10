@@ -1,5 +1,5 @@
 {% extends 'bootstrap_3_layout.html.twig' %}
-{% use 'JJBFormUtilsBundle:Form:form_blocks.html.twig' %}
+{% use '@JJBFormUtils/Form/form_blocks.html.twig' %}
 
 {%- block form_start -%}
     {% set attr = attr|merge({ 'id' : form.vars.id, 'novalidate' : 'novalidate' }) %}
@@ -7,15 +7,15 @@
 {%- endblock form_start -%}
 
 {%- block widget_attributes -%}
-    {% spaceless %}
+    {% apply spaceless %}
         {% set attr = add_js_constraints(form, errors.form.config.options.constraints, attr, translation_domain) %}
         {{ parent(attr) }}
-    {% endspaceless %}
+    {% endapply %}
 {%- endblock widget_attributes -%}
 
 {%- block widget_container_attributes -%}
-    {% spaceless %}
+    {% apply spaceless %}
         {% set attr = add_js_constraints(form, errors.form.config.options.constraints, attr, translation_domain) %}
         {{ parent(attr) }}
-    {% endspaceless %}
+    {% endapply %}
 {%- endblock widget_container_attributes -%}
