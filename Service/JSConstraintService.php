@@ -375,6 +375,6 @@ class JSConstraintService
      */
     private function trans($string, array $params = [], $domain, $number = 1)
     {
-        return $this->translator->transChoice($string, $number, $params, $domain);
+        return $this->translator->trans($string, $params, $domain);
     }
 }
